@@ -100,6 +100,19 @@ while True:
         ball.sety(-500)
         ball.dy *= -1
 
+    # make sure paddle doesn't leave board
+    # paddle 1
+    if paddle_1.ycor() > 477:
+        paddle_1.sety(477)
+    if paddle_1.ycor() < -477:
+        paddle_1.sety(-477)
+
+    # paddle 2
+    if paddle_2.ycor() > 477:
+        paddle_2.sety(477)
+    if paddle_2.ycor() < -477:
+        paddle_2.sety(-477)
+
     if ball.xcor() > 950:
         ball.setx(0)
         ball.dx *= -1
